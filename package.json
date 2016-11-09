@@ -1,0 +1,48 @@
+{
+  "name": "mm-starter",
+  "version": "0.0.1",
+  "description": "Starter for Middleman websites",
+  "scripts": {
+    "webpack": "webpack --watch",
+    "build": "rm -rf build && webpack -p && bundle exec middleman build",
+    "deploy-staging": "better-npm-run deploy-staging",
+    "deploy-production": "better-npm-run deploy-production",
+    "bds": "npm run build && npm run deploy-staging",
+    "bdp": "npm run build && npm run deploy-production"
+  },
+  "betterScripts": {
+    "deploy-staging": {
+      "command": "rsync -avze 'ssh -p 2200' --delete build/ ${SSH_USER}@${SSH_HOST}:${SSH_DIR}",
+      "env": {
+        "SSH_USER": "username",
+        "SSH_HOST": "00.000.000.000",
+        "SSH_DIR": "/home/username/public_html"
+      }
+    },
+    "deploy-production": {
+      "command": "rsync -avze 'ssh -p 2200' --delete build/ ${SSH_USER}@${SSH_HOST}:${SSH_DIR}",
+      "env": {
+        "SSH_USER": "username",
+        "SSH_HOST": "00.000.000.000",
+        "SSH_DIR": "/home/username/public_html"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adekbadek/middleman-site.git"
+  },
+  "author": "Adam Borowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adekbadek/middleman-site/issues"
+  },
+  "homepage": "https://github.com/adekbadek/middleman-site#readme",
+  "devDependencies": {
+    "babel-loader": "^6.2.7",
+    "css-loader": "^0.25.0",
+    "progress-bar-webpack-plugin": "^1.9.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3"
+  }
+}

@@ -8,10 +8,9 @@ html
 
     title Site
 
-    script src="https://code.jquery.com/jquery-2.2.0.min.js" 
-    = javascript_include_tag :all
-
     = stylesheet_link_tag :site
 
   body class=page_classes
     = yield
+
+    = javascript_include_tag :main
