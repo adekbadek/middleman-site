@@ -14,5 +14,7 @@ gem 'middleman-livereload'
 
 gem 'middleman-autoprefixer'
 
+gem 'slim', '~> 3.0', '>= 3.0.6'
+
 # performance
 gem 'middleman-minify-html'
