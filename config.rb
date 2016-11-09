@@ -20,7 +20,7 @@ page '/*.txt', layout: false
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload, apply_css_live: false, apply_js_live: false
+  # activate :livereload, apply_css_live: false, apply_js_live: false
 end
 
 # tell Middleman to create a folder for each .html file and place the built template file as the index of that folder
