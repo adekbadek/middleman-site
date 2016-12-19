@@ -28,6 +28,12 @@ activate :directory_indexes
 
 activate :autoprefixer
 
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ? './node_modules/webpack/bin/webpack.js -p' : './node_modules/webpack/bin/webpack.js --watch -d',
+  source: ".tmp/dist",
+  latency: 1
+
 ###
 # Helpers
 ###
@@ -46,7 +52,4 @@ configure :build do
 
   # Minify CSS on build
   activate :minify_css
-
-  # Minify Javascript on build
-  activate :minify_javascript
 end

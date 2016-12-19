@@ -6,8 +6,11 @@ module.exports = {
     main: './source/javascripts/main.es6',
   },
   output: {
-    path: './source/javascripts',
+    path: __dirname + '/.tmp/dist',
     filename: '[name].js' // Template based on keys in entry above
+  },
+  resolve: {
+    root: __dirname + '/source/javascripts'
   },
   module: {
     loaders: [
