@@ -11,7 +11,7 @@ module.exports = {
     filename: '[name].js' // Template based on keys in entry above
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.es6$/,
         loader: 'babel-loader',
@@ -21,14 +21,24 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        use: [
+          {
+            loader: "css-loader",
+            options: {
+              modules: true
+            }
+          }
+        ]
       }
     ]
   },
   resolve: {
-    root: path.join(__dirname, '/source/javascripts'),
-    // you can now require('file') instead of require('file.coffee')
-    extensions: ['', '.js', '.json', '.es6']
+    modules: [
+      path.join(__dirname, '/source/javascripts'),
+      "node_modules"
+    ],
+    // you can now require('file') instead of require('file.js')
+    extensions: ['.js', '.json', '.es6']
   },
   plugins: [
     new ProgressBarPlugin({width: 200, clear: false}),
