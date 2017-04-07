@@ -1,16 +1,14 @@
 var ProgressBarPlugin = require('progress-bar-webpack-plugin');
 var webpack = require('webpack')
+var path = require('path')
 
 module.exports = {
   entry: {
     main: './source/javascripts/main.es6',
   },
   output: {
-    path: __dirname + '/.tmp/dist',
+    path: path.join(__dirname, '/.tmp/dist'),
     filename: '[name].js' // Template based on keys in entry above
-  },
-  resolve: {
-    root: __dirname + '/source/javascripts'
   },
   module: {
     loaders: [
@@ -28,6 +26,7 @@ module.exports = {
     ]
   },
   resolve: {
+    root: path.join(__dirname, '/source/javascripts'),
     // you can now require('file') instead of require('file.coffee')
     extensions: ['', '.js', '.json', '.es6']
   },
