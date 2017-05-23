@@ -48,6 +48,7 @@
     "concurrently": "^3.4.0",
     "css-loader": "^0.25.0",
     "progress-bar-webpack-plugin": "^1.9.0",
+    "some-sass-mixins": "^1.10.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.3.3"
   }
