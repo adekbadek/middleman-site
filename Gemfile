@@ -18,3 +18,5 @@ gem 'slim', '~> 3.0', '>= 3.0.6'
 
 # performance
 gem 'middleman-minify-html'
+
+gem "babel-transpiler"
