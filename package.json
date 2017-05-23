@@ -13,7 +13,7 @@
   },
   "betterScripts": {
     "deploy-staging": {
-      "command": "rsync -avze 'ssh -p 2200' --delete build/ ${SSH_USER}@${SSH_HOST}:${SSH_DIR}",
+      "command": "rsync -avze 'ssh' --delete build/ ${SSH_USER}@${SSH_HOST}:${SSH_DIR}",
       "env": {
         "SSH_USER": "username",
         "SSH_HOST": "00.000.000.000",
@@ -21,7 +21,7 @@
       }
     },
     "deploy-production": {
-      "command": "rsync -avze 'ssh -p 2200' --delete build/ ${SSH_USER}@${SSH_HOST}:${SSH_DIR}",
+      "command": "rsync -avze 'ssh' --delete build/ ${SSH_USER}@${SSH_HOST}:${SSH_DIR}",
       "env": {
         "SSH_USER": "username",
         "SSH_HOST": "00.000.000.000",
