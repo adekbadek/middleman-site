@@ -1,59 +1,55 @@
 ---
-  cat_24: 
+  cat_24:
     slug: "automation"
     name: "Automation"
-  cat_6: 
+  cat_6:
     slug: "important-reading"
     name: "Important Reading"
-  cat_2: 
+  cat_2:
     slug: "watching"
     name: "Watching"
-  cat_7: 
+  cat_7:
     slug: "humans"
     name: "Humans"
-  cat_9: 
+  cat_9:
     slug: "generally-interesting-stuff"
     name: "Generally Interesting Stuff"
-  cat_20: 
+  cat_20:
     slug: "sites-with-pictures"
     name: "Sites with Pictures"
-  cat_22: 
+  cat_22:
     slug: "money"
     name: "Money"
-  cat_18: 
+  cat_18:
     slug: "visual"
     name: "Visual"
-  cat_17: 
+  cat_17:
     slug: "sound"
     name: "Sound"
-  cat_4: 
+  cat_4:
     slug: "facts"
     name: "Facts"
-  cat_3: 
+  cat_3:
     slug: "objects"
     name: "Objects"
-  cat_12: 
+  cat_12:
     slug: "computers"
     name: "Computers"
-  cat_23: 
+  cat_23:
     slug: "history"
     name: "History"
-  cat_19: 
+  cat_19:
     slug: "games"
     name: "Games"
-  cat_21: 
+  cat_21:
     slug: "interaction"
     name: "Interaction"
-  cat_15: 
+  cat_15:
     slug: "places"
     name: "Places"
-  cat_10: 
+  cat_10:
     slug: "strange-things"
     name: "Strange Things"
-  cat_11: 
+  cat_11:
     slug: "funny"
     name: "Funny"
-  cat_1: 
-    slug: "uncategorized"
-    name: "Uncategorized"
-
