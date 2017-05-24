@@ -1,6 +1,44 @@
 @charset "utf-8"
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
 @import ../../node_modules/some-sass-mixins/mixins
 @import sanitize
+@import colors
+@import helpers
+
++margins()
++paddings()
++font-sizes(14 24)
+
 body
-  color: #3b3b3b
+  font-family: 'Open Sans', sans-serif
+  color: $grey
+  background: $dusty
+
+a
+  color: inherit
+  text-decoration: none
+  &:hover,
+  &:focus
+    font-style: italic
+
+main
+  +max-width-center(800)
+
+.categories-container
+  max-width: 100%
+.category
+  width: 390px
+  max-width: 100%
+  &__header
+    line-height: 50px
+    padding-bottom: 6px
+
++bp(820)
+  .categories-container
+    width: auto !important
+    height: auto !important
+  .category
+    width: 100%
+    position: static !important

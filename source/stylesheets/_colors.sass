@@ -1,0 +1,18 @@
+$white: #fff
+$dusty: #f1f1f1
+$grey: #3b3b3b
+
+$blue: #1044fa
+
+$colors: ($blue 'blue') ($white 'white')
++colors($colors)
+
+.border
+  &--all
+    border-width: 1px
+    border-style: solid
+  &--bottom
+    border-bottom-width: 1px
+    border-bottom-style: solid
+  &--blue
+    border-color: $blue
