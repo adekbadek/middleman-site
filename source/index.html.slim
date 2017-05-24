@@ -1,4 +1,17 @@
-.container
-  .row
-    .col-md-12
-      h1 Hello
+main
+  .bg-white.center.p-20.border--all.border--blue.border-radius
+    | A collection of links maintained by
+    a.color-blue href="http://adamboro.com" target="_blank"
+      | &nbsp;Adam Boro
+
+  .categories-container
+    - data.categories.each do |cat_id, cat_name|
+      .category.bg-white.border--all.border--blue.mt-20.plr-20.pb-20.pt-10.border-radius
+        
+        .category__header.fs-24.color-blue.border--bottom.center.pb-10
+          = cat_name.name
+          
+        - data.links.select{ |link| link.category == cat_id }.each do |link|
+          a.mt-20.db href=link.link target='_blank'
+            .color-blue= link.title
+            .fs-14= link.text
