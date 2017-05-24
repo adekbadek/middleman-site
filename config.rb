@@ -27,6 +27,8 @@ activate :external_pipeline,
   source: ".tmp/dist",
   latency: 1
 
+ignore 'javascripts/*'
+
 ###
 # Helpers
 ###
@@ -35,6 +37,8 @@ activate :external_pipeline,
 configure :build do
   # Use relative URLs
   activate :relative_assets
+
+  activate :asset_hash
 
   # Minify CSS on build
   activate :minify_css
