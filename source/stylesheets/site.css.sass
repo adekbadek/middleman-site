@@ -23,13 +23,16 @@ a
   &:focus
     font-style: italic
 
+$main_width: 900
+$main_gutter: 10
+
 main
-  +max-width-center(800)
+  +max-width-center($main_width)
 
 .categories-container
   max-width: 100%
 .category
-  width: 390px
+  width: unquote($main_width / 2 - $main_gutter + 'px')
   max-width: 100%
   &__header
     line-height: 50px

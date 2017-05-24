@@ -5,7 +5,7 @@ const instance = Bricks({
   packed: 'packed',
   sizes: [
     { columns: 1, gutter: 20 },
-    { mq: '820px', columns: 2, gutter: 20 }
+    { mq: '940px', columns: 2, gutter: 20 }
   ]
 })
 
