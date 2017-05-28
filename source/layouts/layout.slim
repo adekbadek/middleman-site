@@ -3,10 +3,15 @@ html
   head
     meta content="IE=edge" http-equiv="X-UA-Compatible"
     meta charset="utf-8"
-    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport"
+    meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport"
     link href='/favicon.ico' rel=('shortcut icon')
 
-    title Site
+    title Links
+    
+    meta name='description' content=data.meta.description
+    meta property='og:title' content=data.meta.description
+    meta property='og:type' content='website'
+    meta property='og:url' content=data.meta.url
 
     = stylesheet_link_tag :site
 
