@@ -7,26 +7,14 @@
     "middleman": "bundle exec middleman server",
     "dev": "concurrently --prefix \"{name}\" --names \"MM,WEBPACK\" -c \"bgBlue,bgGreen\" \"npm run middleman\" \"npm run webpack\"",
     "build": "rm -rf build && bundle exec middleman build",
-    "deploy-staging": "better-npm-run deploy-staging",
-    "deploy-production": "better-npm-run deploy-production",
-    "bds": "npm run build && npm run deploy-staging",
-    "bdp": "npm run build && npm run deploy-production"
+    "bd": "npm run build && better-npm-run deploy"
   },
   "betterScripts": {
-    "deploy-staging": {
-      "command": "rsync -avze 'ssh' --delete build/ ${SSH_USER}@${SSH_HOST}:${SSH_DIR}",
+    "deploy": {
+      "command": "rsync -avze 'ssh' --delete build/ ${SSH}:${SSH_DIR}",
       "env": {
-        "SSH_USER": "username",
-        "SSH_HOST": "00.000.000.000",
-        "SSH_DIR": "/home/username/public_html"
-      }
-    },
-    "deploy-production": {
-      "command": "rsync -avze 'ssh' --delete build/ ${SSH_USER}@${SSH_HOST}:${SSH_DIR}",
-      "env": {
-        "SSH_USER": "username",
-        "SSH_HOST": "00.000.000.000",
-        "SSH_DIR": "/home/username/public_html"
+        "SSH": "scylla",
+        "SSH_DIR": "/home/scylla/adamboro.com/www/links"
       }
     }
   },
